@@ -5,9 +5,9 @@
 
 ## Project set up
 1. Set up Machine 
-2. Clone git repo to local machine
-3. Add gigtignore and requirements. md
-4. Create virtual environment and activate it
+2. Cloned git repo to local machine
+3. Added gigtignore and requirements. md
+4. Created virtual environment and activate it
    
 ```sh
    py -m venv .venv
@@ -16,7 +16,7 @@
 ```
 
 
-5. Install dependencies
+5. Installed dependencies
  
 ``` 
    .\.venv\Scripts\activate
@@ -24,5 +24,5 @@ py -m pip install --upgrade pip setuptools wheel
 py -m pip install --upgrade -r requirements.txt
 
 ```
-6. Add other necessary file and folders 
-7. 
+6. Added other necessary file and folders 
+7. Added python file for data cleaning code 
