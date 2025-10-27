@@ -1,0 +1,30 @@
+# Ignore data backups and large files
+data/*.zip
+data/*.bak
+data/*.tmp
+data/*.csv
+
+# Ignore Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore LaTeX build files
+report/*.aux
+report/*.log
+report/*.out
+report/*.toc
+report/*.pdf
+report/*.synctex.gz
+
+# Virtual environment folders
+env/
+venv/
