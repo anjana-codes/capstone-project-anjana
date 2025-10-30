@@ -1,10 +1,7 @@
 # ======================================================================
-# FEMA HMA Mitigated Properties – Data Cleaning Script (Saves to Data Folder)
+# FEMA HMA Mitigated Properties – Data Cleaning Script 
 # ======================================================================
-# Notes:
-# - All outputs saved directly to your data folder: C:\Repos\capstone-project-anjana\data\
-# - Core cleaning only, pandas-based encoding (no external deps beyond pandas/numpy).
-# - Run this script in your local Python environment.
+
 
 import pandas as pd
 import numpy as np

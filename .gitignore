@@ -13,9 +13,13 @@ __pycache__/
 # Ignore Jupyter Notebook checkpoints
 .ipynb_checkpoints/
 
+# Ignore folders
+.venv/
+
 # Ignore system files
 .DS_Store
 Thumbs.db
+
 
 # Ignore LaTeX build files
 report/*.aux
