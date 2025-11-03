@@ -2,7 +2,7 @@
 data/*.zip
 data/*.bak
 data/*.tmp
-data/*.csv
+
 
 # Ignore Python cache
 __pycache__/
