@@ -16,7 +16,7 @@ This capstone project analyzes the FEMA Hazard Mitigation Assistance (HMA) Mitig
 3. Added gigtignore and requirements. md
 4. Created virtual environment and activated it
    
-```sh
+```
    py -m venv .venv
 .\.venv\Scripts\activate
 
@@ -33,10 +33,10 @@ py -m pip install --upgrade -r requirements.txt
    
 7. Git add-commit-push to Github
 
-'''
+``` 
 git add .
 git commit -m "initial"
 git push -u origin main
 
-''' 
+```
 ## Dataset
