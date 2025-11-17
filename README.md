@@ -111,7 +111,8 @@ The dataset contains records of properties mitigated under FEMA’s Hazard Mitig
 
 
 ## Key Insights
-
+- The temporal analysis clearly shows funding surges after major disasters, indicating a reactive funding model.
+- Funding is highly concentrated in a few states, with Missouri and Washington leading the expenditure, confirming localized hotspots.
 
 ## Important links
 - GitHub link (https://github.com/anjana-codes/capstone-project-anjana)
