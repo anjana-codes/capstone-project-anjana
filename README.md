@@ -109,10 +109,43 @@ The dataset contains records of properties mitigated under FEMA’s Hazard Mitig
 
 ## Modeling Approach
 
+- Dataset Overview: Post-2000 U.S. dataset; target is log-transformed `actualAmountPaid` to reduce right-skewness.
+- Features: Categorical (`state`, `structureType`, `typeOfResidency`, `foundationType`) and numerical (`numberOfProperties`, `programFy`).
+- Preprocessing: One-hot encoding for categorical features; numerical features passed through unchanged; 80/20 train/test split (`random_state=42`).
+- Models Evaluated: Linear Regression (baseline) and Random Forest Regressor (100 trees, `max_depth=15`, `min_samples_split=5`).
+- Evaluation: Metrics include R² (log and original scales), MAE, RMSE; 5-fold cross-validation for generalizability; train/test metrics to detect overfitting.
+
+Summary table for model evaluation 
+
+| Dataset   | Model                   | R² (Log) | R² (Original) | MAE ($)   | RMSE ($)    |
+|-----------|------------------------|----------|---------------|-----------|------------|
+| Training  | Linear Regression       | 0.3955   | -0.0006       | 265,200   | 9,092,721  |
+| Training  | Random Forest Regressor | 0.6570   | 0.0019        | 253,640   | 9,081,705  |
+| Test      | Linear Regression       | 0.3857   | -0.0003       | 222,836   | 9,635,366  |
+| Test      | Random Forest Regressor | 0.5847   | -0.0003       | 213,165   | 9,634,923  |
+
+ - Projections: RFR used for FY2030 scenario (+5 years to `programFy`); national costs increase 17.9% ($1.63B → $1.92B) with 90% CI $1.46B–$2.39B.
+ - Visualizations: Model comparison bar charts, feature importance plots, and top-5 state projections (current vs. future costs).
+
+| State       | Current Cost ($M) | Projected FY2030 Cost ($M) |
+|------------ |----------------- |----------------------------|
+| Missouri    | 2,605            | 240                        |
+| Washington  | 1,703            | 19                         |
+| Florida     | 1,082            | 251                        |
+| Alabama     | 1,025            | 107                        |
+| Pennsylvania| 1,006            | 62                         |
+
 
 ## Key Insights
-- The temporal analysis clearly shows funding surges after major disasters, indicating a reactive funding model.
-- Funding is highly concentrated in a few states, with Missouri and Washington leading the expenditure, confirming localized hotspots.
+- Reactive Funding:Temporal analysis shows funding surges after major disasters, indicating a reactive funding model.  
+- Geographic Concentration: Missouri and Washington lead expenditures, confirming localized hotspots.  
+- Extreme Cost Concentration: Costs are right-skewed (median ~$50K; outliers >$10M); log-transformation normalizes ~80% of mid-range residential projects.  
+- Strategic Priorities: Wind Retrofit (35%) and Acquisition/Demolition (38%) dominate actions; Single-Family structures (~65%) are the primary focus, highlighting gaps in public/commercial asset protection.  
+- Reactive Temporal Trends: Spikes in 2005 (Katrina), 2010 (floods/tornadoes), 2017 (hurricanes); ~40% decline post-2020; average cost per property rose ~$40K (2000s) → ~$75K (2010s).  
+- Geographic Hotspots: Top 10 states account for ~75% of spending (e.g., Missouri $2.6B); inland flood areas reveal hidden risks; low-funding states (e.g., North Dakota <$10M) face resilience gaps.  
+- Predictive Modeling Insights: Random Forest Regressor captures nonlinear patterns (e.g., state × structureType); FY2030 projections show hotspot fade (e.g., Missouri -91%) and spending redistribution, signaling policy risks.  
+- Policy Implications: Reactive funding creates inequities; recommendations include 20% preemptive allocation, diversified strategies for public assets, and integration of climate projections for hazard-specific models.
+
 
 ## Important links
 - GitHub link (https://github.com/anjana-codes/capstone-project-anjana)
