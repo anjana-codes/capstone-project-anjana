@@ -29,10 +29,10 @@ capstone-project-anjana/
 ├── data/ # Raw and cleaned datasets
 │ ├── hma_mitigated_properties_v4.csv
 │ └── hma_mitigated_properties_cleaned.csv
-├── images/ # Figures and visualizations from EDA aand modeling
-├── notebooks/ # Jupyter notebooks for EDA and modeling
+├── images/ # Figures and visualizations from EDA and modeling
+├── notebooks/ 
 │ └── fema_mitigation_analysis.ipynb
-├── reports/ # Generated reports and summaries
+├── reports
 ├── .gitignore
 ├── requirements.txt
 ├── LICENSE
@@ -148,5 +148,5 @@ Summary table for model evaluation
 
 
 ## Important links
-- GitHub link (https://github.com/anjana-codes/capstone-project-anjana)
+- GitHub repo link (https://github.com/anjana-codes/capstone-project-anjana)
 - Overleaf link (https://www.overleaf.com/read/qvzgmxrvcscf#589394)
